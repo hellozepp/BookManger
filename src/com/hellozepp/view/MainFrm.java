@@ -6,19 +6,24 @@
 
 package com.hellozepp.view;
 
-import com.hellozepp.model.Enum.UserTypeEnum;
-import com.hellozepp.model.User;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+
+import com.hellozepp.model.User;
+import com.hellozepp.model.Enum.UserTypeEnum;
 
 /**
  * @author __USER__
  */
 public class MainFrm extends javax.swing.JFrame {
-    //    public static final String imagePath = "."+ File.separator+"image"+File.separator;
-    public static final String imagePath = "/opt/projects/javaGUI/BookManger/src/com/hellozepp/view/image/";
+        public static final String imagePath = "."+ File.separator+"image"+File.separator;
+//    public static final String imagePath = "/opt/projects/javaGUI/BookManger/src/com/hellozepp/view/image/";
     public static User user;
 
     /**

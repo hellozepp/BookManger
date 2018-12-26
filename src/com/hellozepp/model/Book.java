@@ -44,6 +44,21 @@ public class Book {
         this.deleted = deleted;
     }
 
+    public Book(int id, String bookName, String author, String sex, float price, String bookDesc, int bookTypeId, String bookTypeName, String press, Integer copies, Float purchasePrice, Integer deleted) {
+        this.id = id;
+        this.bookName = bookName;
+        this.author = author;
+        this.sex = sex;
+        this.price = price;
+        this.bookDesc = bookDesc;
+        this.bookTypeId = bookTypeId;
+        BookTypeName = bookTypeName;
+        this.press = press;
+        this.copies = copies;
+        this.purchasePrice = purchasePrice;
+        this.deleted = deleted;
+    }
+
     public Book(int id, String bookName, String author, String sex,
                 float price, String bookDesc, int bookTypeId) {
 		super();

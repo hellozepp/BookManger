@@ -39,7 +39,7 @@ public class LeaseDao {
                 resultUser.setDeposit(rs.getFloat("deposit"));
                 resultUser.setEmployee(rs.getString("employee"));
                 resultUser.setLeaseTime(rs.getDate("leaseTime"));
-                resultUser.setPhoneNumber(rs.getLong("phoneNumber"));
+                resultUser.setPhoneNumber(rs.getString("phoneNumber"));
                 resultUser.setDeleted(rs.getInt("deleted"));
                 resultUser.setPrice(rs.getFloat("price"));
                 resultUsers.add(resultUser);

@@ -42,7 +42,7 @@ public class EmpoleeInterFrm extends javax.swing.JInternalFrame {
                 v.add(user.getUserName());
                 v.add(user.getPassword());
                 v.add(user.getName());
-
+                dtm.addRow(v);
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block

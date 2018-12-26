@@ -133,106 +133,106 @@ public class BookAddInterFrm extends javax.swing.JInternalFrame {
             }
         });
 
-        lblNewLabel = new JLabel("\u56FE\u4E66\u8FDB\u4EF7\uFF1A");
+        lblNewLabel = new JLabel("图书进价：");
 
         purchasePriceTxt = new JTextField();
 
-        出版社 = new JLabel("\u51FA\u7248\u793E\uFF1A");
+        出版社 = new JLabel("出版社：");
 
         pressTxt = new JTextField();
         pressTxt.setColumns(10);
 
-        copiesTxt = new JLabel("\u518C   \u6570\uFF1A");
+        ceshuText = new JLabel("册   数：");
 
-        textField_1 = new JTextField();
-        textField_1.setColumns(10);
+        copiesTxt1 = new JTextField();
+        copiesTxt1.setColumns(10);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         layout.setHorizontalGroup(
-                layout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(55)
-                                .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(出版社)
-                                                .addContainerGap())
-                                        .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                                .addGroup(Alignment.TRAILING, layout.createSequentialGroup()
-                                                        .addComponent(jLabel6)
-                                                        .addGap(37)
-                                                        .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
-                                                        .addGap(44))
-                                                .addGroup(layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
-                                                                        .addGap(38)
-                                                                        .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                        .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                                                                .addComponent(jLabel1)
-                                                                                .addComponent(jLabel3)
-                                                                                .addComponent(jLabel5))
-                                                                        .addGap(29)
-                                                                        .addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-                                                                                .addComponent(jcb_BookType, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                                .addGroup(layout.createSequentialGroup()
-                                                                                        .addComponent(jrb_man, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
-                                                                                        .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                                                        .addComponent(jrb_female, 0, 0, Short.MAX_VALUE))
-                                                                                .addComponent(bookNameTxt, GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                                                                                .addComponent(pressTxt))
-                                                                        .addGap(63)
-                                                                        .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                                                                .addComponent(jLabel2)
-                                                                                .addComponent(jLabel4)
-                                                                                .addComponent(lblNewLabel)
-                                                                                .addComponent(copiesTxt))
-                                                                        .addGap(33)
-                                                                        .addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-                                                                                .addComponent(textField_1)
-                                                                                .addComponent(purchasePriceTxt)
-                                                                                .addComponent(priceTxt)
-                                                                                .addComponent(authorTxt, GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))))
-                                                        .addContainerGap(72, Short.MAX_VALUE)))))
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addGap(55)
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(layout.createSequentialGroup()
+        					.addComponent(出版社)
+        					.addContainerGap())
+        				.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+        					.addGroup(layout.createSequentialGroup()
+        						.addComponent(jLabel6)
+        						.addGap(37)
+        						.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+        						.addGap(44))
+        					.addGroup(layout.createSequentialGroup()
+        						.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        							.addGroup(layout.createSequentialGroup()
+        								.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+        								.addGap(18)
+        								.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
+        							.addGroup(layout.createSequentialGroup()
+        								.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        									.addComponent(jLabel1)
+        									.addComponent(jLabel3)
+        									.addComponent(jLabel5))
+        								.addGap(29)
+        								.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+        									.addComponent(jcb_BookType, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        									.addGroup(layout.createSequentialGroup()
+        										.addComponent(jrb_man, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
+        										.addPreferredGap(ComponentPlacement.UNRELATED)
+        										.addComponent(jrb_female, 0, 0, Short.MAX_VALUE))
+        									.addComponent(bookNameTxt, GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+        									.addComponent(pressTxt))
+        								.addGap(63)
+        								.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        									.addComponent(jLabel2)
+        									.addComponent(jLabel4)
+        									.addComponent(lblNewLabel)
+        									.addComponent(ceshuText))
+        								.addGap(33)
+        								.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+        									.addComponent(copiesTxt1)
+        									.addComponent(purchasePriceTxt)
+        									.addComponent(priceTxt)
+        									.addComponent(authorTxt, GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))))
+        						.addContainerGap(72, Short.MAX_VALUE)))))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(32)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(jLabel1)
-                                        .addComponent(bookNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel2)
-                                        .addComponent(authorTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addGap(35)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jrb_man)
-                                        .addComponent(jrb_female)
-                                        .addComponent(jLabel4)
-                                        .addComponent(priceTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addGap(46)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jcb_BookType, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblNewLabel)
-                                        .addComponent(purchasePriceTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addGap(44)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(出版社)
-                                        .addComponent(pressTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(copiesTxt)
-                                        .addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 124, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel6))
-                                .addGap(35)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(jButton1)
-                                        .addComponent(jButton2))
-                                .addGap(26))
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addGap(32)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jLabel1)
+        				.addComponent(bookNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jLabel2)
+        				.addComponent(authorTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(35)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jLabel3)
+        				.addComponent(jrb_man)
+        				.addComponent(jrb_female)
+        				.addComponent(jLabel4)
+        				.addComponent(priceTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(46)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jLabel5)
+        				.addComponent(jcb_BookType, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(lblNewLabel)
+        				.addComponent(purchasePriceTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(44)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(出版社)
+        				.addComponent(pressTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(ceshuText)
+        				.addComponent(copiesTxt1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addPreferredGap(ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 124, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jLabel6))
+        			.addGap(35)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jButton1)
+        				.addComponent(jButton2))
+        			.addGap(26))
         );
         getContentPane().setLayout(layout);
 
@@ -247,14 +247,14 @@ public class BookAddInterFrm extends javax.swing.JInternalFrame {
         String bookDesc = this.bookDescTxt.getText();
         Float purchasePrice;
         try {
-            purchasePrice = Float.parseFloat(textField_1.getText());
+            purchasePrice = Float.parseFloat(copiesTxt1.getText());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "进价必须为数值！");
             return;
         }
         Integer copies;
-        if (StringUtils.isNotBlank(copiesTxt.getText()) && StringUtils.isNumeric(copiesTxt.getText())) {
-            copies = Integer.parseInt(copiesTxt.getText());
+        if (StringUtils.isNotBlank(copiesTxt1.getText()) && StringUtils.isNumeric(copiesTxt1.getText())) {
+            copies = Integer.parseInt(copiesTxt1.getText());
         } else {
             JOptionPane.showMessageDialog(null, "册数必须为数值！");
             return;
@@ -323,8 +323,8 @@ public class BookAddInterFrm extends javax.swing.JInternalFrame {
         }
         this.bookDescTxt.setText("");
         pressTxt.setText("");
-        copiesTxt.setText("");
-        textField_1.setText("");
+        ceshuText.setText("");
+        copiesTxt1.setText("");
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -354,6 +354,6 @@ public class BookAddInterFrm extends javax.swing.JInternalFrame {
     private JTextField purchasePriceTxt;
     private JLabel 出版社;
     private JTextField pressTxt;
-    private JLabel copiesTxt;
-    private JTextField textField_1;
+    private JLabel ceshuText;
+    private JTextField copiesTxt1;
 }

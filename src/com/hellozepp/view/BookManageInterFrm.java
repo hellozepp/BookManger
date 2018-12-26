@@ -23,7 +23,7 @@ import java.sql.ResultSet;
 import java.util.Vector;
 
 /**
- * @author __USER__
+ * 图书管理
  */
 public class BookManageInterFrm extends javax.swing.JInternalFrame {
     DbUtil dbUtil = new DbUtil();
@@ -165,7 +165,7 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
 
                 },
                 new String[]{
-                        "编号", "图书名称", "图书作者", "作者性别", "图书价格", "图书描述", "图书类别","出版社","册数","进价"
+                        "编号", "图书名称", "图书作者", "作者性别", "图书价格", "图书描述", "图书类别", "出版社", "册数", "进价"
                 }
         ) {
             boolean[] canEdit = new boolean[]{
@@ -492,7 +492,7 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
         int bookTypeId = bookType.getId();
 
 
-        Book book = new Book(Integer.parseInt(id), bookName, author, sex, Float.parseFloat(price), bookDesc, bookTypeId);
+        Book book = new Book(Integer.parseInt(id), bookName, author, sex, Float.parseFloat(price), bookDesc, bookTypeId, bookType.getBookTypeName(), press, copies, purchasePrice, 0);
         Connection con = null;
         try {
             con = dbUtil.getCon();
@@ -564,8 +564,9 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
         }
     }
 
+    // 获取选中的行
     private void bookTableMousePressed(java.awt.event.MouseEvent evt) {
-        // 获取选中的行
+
         int row = this.bookTable.getSelectedRow();
         this.idTxt.setText((Integer) bookTable.getValueAt(row, 0) + "");
         this.bookNameTxt.setText((String) bookTable.getValueAt(row, 1));
@@ -586,6 +587,9 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
                 this.jcb_bookType.setSelectedIndex(i);
             }
         }
+        pressTxt.setText((String) bookTable.getValueAt(row, 7));
+        copiesTxt.setText((String) bookTable.getValueAt(row, 8));
+        purchasePriceTxt.setText((String) bookTable.getValueAt(row, 9));
     }
 
     private void jb_searchActionPerformed(java.awt.event.ActionEvent evt) {

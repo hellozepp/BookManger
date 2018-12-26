@@ -61,14 +61,16 @@ public class UserDao {
         User resultUser;
         try {
             con = dbUtil.getCon();
-            String sql = "select * from t_user where userType=" + UserTypeEnum.USER.getName();
+            String sql = "select * from t_user where userType='" + UserTypeEnum.USER.getName()+"'";
             PreparedStatement pstmt = con.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 resultUser = new User();
                 resultUser.setUserName(rs.getString("userName"));
+                resultUser.setId(rs.getInt("id"));
+                resultUser.setName(rs.getString("name"));
                 resultUser.setPassword(rs.getString("password"));
-                resultUser.setPassword(rs.getString("userType"));
+                resultUser.setUserType(rs.getString("userType"));
                 userList.add(resultUser);
 
             }
@@ -92,10 +94,10 @@ public class UserDao {
     public int Add(Connection con, User book) throws Exception {
         String sql = "insert into t_user values(null,?,?,?,?)";
         PreparedStatement pstmt = con.prepareStatement(sql);
-        pstmt.setString(1, book.getName());
-        pstmt.setString(2, book.getUserName());
-        pstmt.setString(3, book.getPassword());
-        pstmt.setString(4, UserTypeEnum.USER.getName());
+        pstmt.setString(1, book.getUserName());
+        pstmt.setString(2, book.getPassword());
+        pstmt.setString(3, UserTypeEnum.USER.getName());
+        pstmt.setString(4, book.getName());
         return pstmt.executeUpdate();
     }
     /**

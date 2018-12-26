@@ -79,49 +79,50 @@ public class EmpoleeAddInterFrm extends javax.swing.JInternalFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         layout.setHorizontalGroup(
-                layout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(55)
-                                .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                        .addComponent(jLabel4)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(38)
-                                                                .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(name)
-                                                                .addGap(53)
-                                                                .addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-                                                                        .addComponent(nameTxt, GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(passwordTxt)))
-                                                                .addGap(63)
-                                                                .addComponent(jLabel2)
-                                                                .addGap(45)
-                                                                .addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)))
-                                                .addContainerGap(72, Short.MAX_VALUE))))
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(layout.createSequentialGroup()
+        					.addGap(55)
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(jLabel4)
+        						.addGroup(layout.createSequentialGroup()
+        							.addComponent(name)
+        							.addGap(53)
+        							.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+        								.addComponent(nameTxt, GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+        								.addGroup(layout.createSequentialGroup()
+        									.addPreferredGap(ComponentPlacement.RELATED)
+        									.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        										.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+        										.addComponent(passwordTxt))))
+        							.addGap(63)
+        							.addComponent(jLabel2)
+        							.addGap(45)
+        							.addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
+        				.addGroup(layout.createSequentialGroup()
+        					.addGap(26)
+        					.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
+        			.addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(32)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(name)
-                                        .addComponent(nameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel2)
-                                        .addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addGap(35)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(jLabel4)
-                                        .addComponent(passwordTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(ComponentPlacement.RELATED, 388, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(jButton1)
-                                        .addComponent(jButton2))
-                                .addGap(26))
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addGap(32)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(name)
+        				.addComponent(nameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jLabel2)
+        				.addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(35)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jLabel4)
+        				.addComponent(passwordTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(94)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jButton1)
+        				.addComponent(jButton2))
+        			.addContainerGap(332, Short.MAX_VALUE))
         );
         getContentPane().setLayout(layout);
 
@@ -153,14 +154,14 @@ public class EmpoleeAddInterFrm extends javax.swing.JInternalFrame {
             con = dbUtil.getCon();
             int addNum = bookDao.Add(con, book);
             if (addNum == 1) {
-                JOptionPane.showMessageDialog(null, "图书添加成功！");
+                JOptionPane.showMessageDialog(null, "店员添加成功！");
                 this.resetValue();
             } else {
-                JOptionPane.showMessageDialog(null, "图书添加失败！");
+                JOptionPane.showMessageDialog(null, "店员添加失败！");
             }
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "图书添加失败！");
+            JOptionPane.showMessageDialog(null, "店员添加失败！");
         } finally {
             try {
                 dbUtil.closeCon(con);

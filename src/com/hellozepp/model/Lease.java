@@ -12,7 +12,7 @@ public class Lease {
     private Long bookId;
     private Float deposit;
     private Float price;
-    private Long phoneNumber;
+    private String phoneNumber;
     private String employee;
     private Integer deleted;
     private Date leaseTime;
@@ -20,7 +20,7 @@ public class Lease {
     public Lease() {
     }
 
-    public Lease(Long id, Long bookId, Float deposit, Float price, Long phoneNumber, String employee, Integer deleted, Date leaseTime) {
+    public Lease(Long id, Long bookId, Float deposit, Float price, String phoneNumber, String employee, Integer deleted, Date leaseTime) {
         this.id = id;
         this.bookId = bookId;
         this.deposit = deposit;
@@ -63,11 +63,11 @@ public class Lease {
         this.price = price;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

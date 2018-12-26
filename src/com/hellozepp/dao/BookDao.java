@@ -69,7 +69,7 @@ public class BookDao {
         pstmt.setInt(6, book.getBookTypeId());
         pstmt.setInt(10, book.getId());
         pstmt.setString(7, book.getPress());
-        pstmt.setInt(8, book.getCopies());
+        pstmt.setInt(8, book.getCopies()==null?0:book.getCopies());
         pstmt.setFloat(9, book.getPurchasePrice());
         return pstmt.executeUpdate();
     }
