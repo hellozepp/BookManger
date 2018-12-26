@@ -1,0 +1,4 @@
+1.执行dump文件
+2.mysql密码
+3.image路径修改 MainFrm.java
+4.首页 loginOnFrm
