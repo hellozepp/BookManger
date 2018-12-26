@@ -301,11 +301,11 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
         purchasePriceTxt = new JTextField();
         purchasePriceTxt.setColumns(10);
         lblNewLabel_1 = new JLabel("\u518C\u6570\uFF1A");
-        copiesTxt = new JTextField();
-        copiesTxt.setColumns(10);
+        copiesTxt1 = new JTextField();
+        copiesTxt1.setColumns(10);
         pressTxt = new JLabel("\u51FA\u7248\u793E\uFF1A");
-        textField_2 = new JTextField();
-        textField_2.setColumns(10);
+        chubanshe = new JTextField();
+        chubanshe.setColumns(10);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2Layout.setHorizontalGroup(
@@ -325,7 +325,7 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
                                                         .addComponent(lblNewLabel_1))
                                                 .addPreferredGap(ComponentPlacement.RELATED)
                                                 .addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING, false)
-                                                        .addComponent(copiesTxt)
+                                                        .addComponent(copiesTxt1)
                                                         .addComponent(priceTxt)
                                                         .addComponent(idTxt, GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
                                                 .addGap(27)
@@ -340,7 +340,7 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
                                                                         .addComponent(pressTxt))
                                                                 .addGap(18)
                                                                 .addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING)
-                                                                        .addComponent(textField_2, GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                                                                        .addComponent(chubanshe, GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
                                                                         .addComponent(authorTxt))))
                                                 .addGap(33)
                                                 .addGroup(jPanel2Layout.createParallelGroup(Alignment.LEADING)
@@ -399,9 +399,9 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
                                 .addGap(7)
                                 .addGroup(jPanel2Layout.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(lblNewLabel_1)
-                                        .addComponent(copiesTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(copiesTxt1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pressTxt)
-                                        .addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(chubanshe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                                 .addGroup(jPanel2Layout.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(jb_modify)
@@ -456,13 +456,13 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
             return;
         }
         Integer copies;
-        if (StringUtils.isNotBlank(copiesTxt.getText()) && StringUtils.isNumeric(copiesTxt.getText())) {
-            copies = Integer.parseInt(copiesTxt.getText());
+        if (StringUtils.isNotBlank(copiesTxt1.getText()) && StringUtils.isNumeric(copiesTxt1.getText())) {
+            copies = Integer.parseInt(copiesTxt1.getText());
         } else {
             JOptionPane.showMessageDialog(null, "册数必须为数值！");
             return;
         }
-        String press = textField_2.getText();
+        String press = chubanshe.getText();
         if (StringUtil.isEmpty(press)) {
             JOptionPane.showMessageDialog(null, "出版社不能为空！");
             return;
@@ -587,8 +587,8 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
                 this.jcb_bookType.setSelectedIndex(i);
             }
         }
-        pressTxt.setText((String) bookTable.getValueAt(row, 7));
-        copiesTxt.setText((String) bookTable.getValueAt(row, 8));
+        chubanshe.setText((String) bookTable.getValueAt(row, 7));
+        copiesTxt1.setText((String) bookTable.getValueAt(row, 8));
         purchasePriceTxt.setText((String) bookTable.getValueAt(row, 9));
     }
 
@@ -650,9 +650,9 @@ public class BookManageInterFrm extends javax.swing.JInternalFrame {
     private JLabel lblNewLabel;
     private JTextField purchasePriceTxt;
     private JLabel lblNewLabel_1;
-    private JTextField copiesTxt;
+    private JTextField copiesTxt1;
     private JLabel pressTxt;
-    private JTextField textField_2;
+    private JTextField chubanshe;
     // End of variables declaration//GEN-END:variables
 
 }
