@@ -10,6 +10,8 @@ import com.hellozepp.model.Enum.UserTypeEnum;
 import com.hellozepp.model.User;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author __USER__
@@ -124,24 +126,40 @@ public class MainFrm extends javax.swing.JFrame {
         });
 
         menuItem = new JMenuItem();
-        menuItem.setText("\u79DF\u8D41\u4FE1\u606F");
+        menuItem.setText("租赁信息");
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jmiLeasePerformed(e);
+            }
+        });
         jMenu1.add(menuItem);
 
         employeeMenu = new JMenu();
         if (!UserTypeEnum.ADMIN.getName().equals(user.getUserType())) {
             employeeMenu.setEnabled(false);
-        }else {
-             employeeMenu.setEnabled(true);
+        } else {
+            employeeMenu.setEnabled(true);
         }
-        employeeMenu.setText("\u5458\u5DE5\u7BA1\u7406");
+        employeeMenu.setText("员工管理");
         jMenu1.add(employeeMenu);
 
         addEmployeeItem = new JMenuItem();
-        addEmployeeItem.setText("\u6DFB\u52A0\u5458\u5DE5");
+        addEmployeeItem.setText("添加员工");
+        addEmployeeItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiEmpoleeAddInterFrmPerformed(evt);
+            }
+        });
         employeeMenu.add(addEmployeeItem);
 
         employeeListItem = new JMenuItem();
         employeeListItem.setText("员工列表");
+        employeeListItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiEmpoleeInterFrmPerformed(evt);
+            }
+        });
         employeeMenu.add(employeeListItem);
         jMenu1.add(jmiExit);
 
@@ -153,7 +171,7 @@ public class MainFrm extends javax.swing.JFrame {
 
         jmiaboutJava1234.setIcon(new javax.swing.ImageIcon(
                 MainFrm.imagePath + "me.png"));
-        jmiaboutJava1234.setText("about \u56FE\u4E66\u7BA1\u7406\u7CFB\u7EDF");
+        jmiaboutJava1234.setText("about 图书管理系统");
         jmiaboutJava1234.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiaboutJava1234ActionPerformed(evt);
@@ -177,12 +195,13 @@ public class MainFrm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>
+
     //GEN-END:initComponents
 
     private void jmiaboutJava1234ActionPerformed(java.awt.event.ActionEvent evt) {
-        AboutJava1234InterFrm aboutJava1234InterFrm = new AboutJava1234InterFrm();
-        aboutJava1234InterFrm.setVisible(true);
-        this.table.add(aboutJava1234InterFrm);
+        HelpInterFrm helpInterFrm = new HelpInterFrm();
+        helpInterFrm.setVisible(true);
+        this.table.add(helpInterFrm);
     }
 
     private void jmiBookManageActionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,6 +224,24 @@ public class MainFrm extends javax.swing.JFrame {
 
     private void jmiBookTypeAddActionPerformed(java.awt.event.ActionEvent evt) {
         BookTypeInterFrm bookTypeInterFrm = new BookTypeInterFrm();
+        bookTypeInterFrm.setVisible(true);
+        this.table.add(bookTypeInterFrm);
+    }
+
+    private void jmiLeasePerformed(ActionEvent evt) {
+        LeaseInterFrm bookTypeInterFrm = new LeaseInterFrm();
+        bookTypeInterFrm.setVisible(true);
+        this.table.add(bookTypeInterFrm);
+    }
+
+    private void jmiEmpoleeInterFrmPerformed(ActionEvent evt) {
+        EmpoleeInterFrm bookTypeInterFrm = new EmpoleeInterFrm();
+        bookTypeInterFrm.setVisible(true);
+        this.table.add(bookTypeInterFrm);
+    }
+
+    private void jmiEmpoleeAddInterFrmPerformed(ActionEvent evt) {
+        EmpoleeAddInterFrm bookTypeInterFrm = new EmpoleeAddInterFrm();
         bookTypeInterFrm.setVisible(true);
         this.table.add(bookTypeInterFrm);
     }

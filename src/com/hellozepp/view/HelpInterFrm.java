@@ -1,5 +1,5 @@
 /*
- * AboutJava1234InterFrm.java
+ * HelpInterFrm.java
  *
  * Created on __DATE__, __TIME__
  */
@@ -12,10 +12,10 @@ import javax.swing.GroupLayout;
  *
  * @author  __USER__
  */
-public class AboutJava1234InterFrm extends javax.swing.JInternalFrame {
+public class HelpInterFrm extends javax.swing.JInternalFrame {
 
-	/** Creates new form AboutJava1234InterFrm */
-	public AboutJava1234InterFrm() {
+	/** Creates new form HelpInterFrm */
+	public HelpInterFrm() {
 		initComponents();
 		this.setLocation(200, 50);
 	}
