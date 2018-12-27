@@ -93,17 +93,17 @@ public class EmpoleeAddInterFrm extends javax.swing.JInternalFrame {
         								.addComponent(nameTxt, GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
         								.addGroup(layout.createSequentialGroup()
         									.addPreferredGap(ComponentPlacement.RELATED)
-        									.addGroup(layout.createParallelGroup(Alignment.LEADING)
-        										.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-        										.addComponent(passwordTxt))))
+        									.addComponent(passwordTxt)))
         							.addGap(63)
         							.addComponent(jLabel2)
         							.addGap(45)
         							.addComponent(userNameTxt, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE))))
         				.addGroup(layout.createSequentialGroup()
-        					.addGap(26)
-        					.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))
-        			.addContainerGap(72, Short.MAX_VALUE))
+        					.addGap(69)
+        					.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
+        					.addGap(45)
+        					.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)))
+        			.addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
         	layout.createParallelGroup(Alignment.LEADING)
@@ -120,9 +120,9 @@ public class EmpoleeAddInterFrm extends javax.swing.JInternalFrame {
         				.addComponent(passwordTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         			.addGap(94)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton1)
-        				.addComponent(jButton2))
-        			.addContainerGap(332, Short.MAX_VALUE))
+        				.addComponent(jButton2)
+        				.addComponent(jButton1))
+        			.addContainerGap(36, Short.MAX_VALUE))
         );
         getContentPane().setLayout(layout);
 

@@ -37,7 +37,7 @@ CREATE TABLE `t_book` (
   PRIMARY KEY (`id`),
   KEY `bookTypeId` (`bookTypeId`),
   CONSTRAINT `t_book_ibfk_1` FOREIGN KEY (`bookTypeId`) REFERENCES `t_booktype` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,28 +52,28 @@ CREATE TABLE `t_booktype` (
   `bookTypeName` varchar(20) DEFAULT NULL,
   `bookTypeDesc` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `t_lease_book`
+-- Table structure for table `t_lease`
 --
 
-DROP TABLE IF EXISTS `t_lease_book`;
+DROP TABLE IF EXISTS `t_lease`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `t_lease_book` (
+CREATE TABLE `t_lease` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `bookId` int(11) DEFAULT NULL,
   `deposit` float DEFAULT NULL COMMENT '押金',
   `price` float DEFAULT NULL COMMENT '租赁价格',
-  `phoneNumber` int(11) DEFAULT NULL COMMENT '租赁人手机号',
+  `phoneNumber` varchar(11) DEFAULT NULL COMMENT '租赁人手机号',
   `employee` varchar(200) DEFAULT NULL COMMENT '店员',
   `deleted` int(11) DEFAULT '0' COMMENT '0:not deleted 1:is deleted',
   `leaseTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '租赁时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `t_lease_book_id_uindex` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='租赁信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='租赁信息表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -109,8 +109,9 @@ CREATE TABLE `t_user` (
   `userName` varchar(20) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
   `userType` varchar(20) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL COMMENT '姓名',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -122,4 +123,4 @@ CREATE TABLE `t_user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-26 10:39:35
+-- Dump completed on 2018-12-27 12:50:58

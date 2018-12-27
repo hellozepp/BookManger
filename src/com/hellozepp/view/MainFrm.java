@@ -17,6 +17,8 @@ import javax.swing.JOptionPane;
 
 import com.hellozepp.model.User;
 import com.hellozepp.model.Enum.UserTypeEnum;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 /**
  * @author __USER__
@@ -197,6 +199,11 @@ public class MainFrm extends javax.swing.JFrame {
         layout.setVerticalGroup(layout.createParallelGroup(
                 javax.swing.GroupLayout.Alignment.LEADING).addComponent(table,
                 javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE));
+        
+        JLabel lblNewLabel = new JLabel("");
+        lblNewLabel.setIcon(new ImageIcon(MainFrm.class.getResource("/com/hellozepp/view/image/13691301,1440,900.jpg")));
+        lblNewLabel.setBounds(0, 0, 400, 279);
+        table.add(lblNewLabel);
 
         pack();
     }// </editor-fold>
@@ -287,6 +294,4 @@ public class MainFrm extends javax.swing.JFrame {
     private JMenu employeeMenu;
     private JMenuItem addEmployeeItem;
     private JMenuItem employeeListItem;
-    // End of variables declaration//GEN-END:variables
-
 }
